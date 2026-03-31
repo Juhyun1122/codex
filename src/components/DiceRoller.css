@@ -1,0 +1,102 @@
+.dice-roller {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+}
+
+.dice-types {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.dice-btn {
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.dice-btn:hover {
+  background: var(--bg-tile-hover);
+  color: var(--text-primary);
+}
+
+.dice-btn.active {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+}
+
+.dice-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dice-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.dice-options input {
+  width: 56px;
+  text-align: center;
+  padding: 4px 6px;
+}
+
+.roll-btn {
+  align-self: flex-start;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dice-result {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.result-total {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-primary);
+}
+
+.result-detail {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.result-verdict {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+}
+
+.dice-history {
+  display: flex;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.history-item {
+  font-size: 12px;
+  color: var(--text-muted);
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}

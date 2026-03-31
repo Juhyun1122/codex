@@ -1,0 +1,72 @@
+.timer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+}
+
+.timer-display {
+  font-size: 40px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.timer-display.urgent {
+  color: var(--accent-amber);
+}
+
+.timer-display.done {
+  color: var(--accent-red);
+}
+
+.timer-bar {
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.timer-fill {
+  height: 100%;
+  background: var(--accent-green);
+  border-radius: 2px;
+  transition: width 1s linear;
+}
+
+.timer-fill.urgent {
+  background: var(--accent-amber);
+}
+
+.timer-presets {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.preset-btn {
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 11px;
+  transition: all 0.15s;
+}
+
+.preset-btn:hover {
+  color: var(--text-secondary);
+}
+
+.preset-btn.active {
+  border-color: var(--border-strong);
+  color: var(--text-secondary);
+}
+
+.timer-controls {
+  display: flex;
+  gap: 6px;
+  margin-top: auto;
+}

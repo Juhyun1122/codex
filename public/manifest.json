@@ -1,0 +1,22 @@
+{
+  "name": "Codex",
+  "short_name": "Codex",
+  "description": "GM Toolkit for tabletop RPG",
+  "start_url": "/codex/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#1a1a1a",
+  "orientation": "landscape",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+/* ── 앱 전체 레이아웃 ── */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* ── 상단 헤더 ── */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-secondary);
+  flex-shrink: 0;
+  height: 44px;
+}
+
+.app-title {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+}
+
+.overlay-btns {
+  display: flex;
+  gap: 6px;
+}
+
+/* ── 대시보드 그리드 ── */
+/*
+  태블릿 가로 기준 레이아웃 (4열):
+  [주사위: 1열] [감각묘사: 1열]  [타이머: 1열 ]
+  [NPC: 1열  ] [리마인더: 1열 ]  (나머지 2열은 여백)
+*/
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* 주사위: 상단 1열 */
+.tile-dice {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* 감각 묘사: 상단 2열 */
+.tile-sensory {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* 타이머: 상단 3열 */
+.tile-timer {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/* NPC: 하단 1열 */
+.tile-npc {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* 리마인더: 하단 2열 */
+.tile-reminder {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* 씬 큐카드: 하단 3~4열 (넓게) */
+.tile-cuecard {
+  grid-column: 3 / 5;
+  grid-row: 2;
+}
+
+/* ── 슬라이드업 오버레이 ── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: flex-end;
+  z-index: 100;
+}
+
+.overlay-panel {
+  width: 100%;
+  max-height: 60vh;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.overlay-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.overlay-body {
+  padding: 16px;
+  overflow-y: auto;
+  flex: 1;
+}

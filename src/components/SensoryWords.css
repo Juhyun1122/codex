@@ -1,0 +1,86 @@
+.sensory-words {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+}
+
+.scene-tabs {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.scene-btn {
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 11px;
+  transition: all 0.15s;
+}
+
+.scene-btn:hover {
+  color: var(--text-secondary);
+  border-color: var(--border-strong);
+}
+
+.scene-btn.active {
+  background: var(--bg-tile-hover);
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.sense-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.sense-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.sense-row:hover {
+  background: var(--bg-tile-hover);
+  border-color: var(--border);
+}
+
+.sense-row.has-word {
+  border-color: var(--border);
+}
+
+.sense-name {
+  font-size: 10px;
+  color: var(--text-muted);
+  width: 28px;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sense-word {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.sense-row.has-word .sense-word {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.pick-all-btn {
+  margin-top: auto;
+  width: 100%;
+  padding: 8px;
+  font-size: 13px;
+}
